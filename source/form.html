@@ -3,11 +3,10 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
-    <link href="css/normalize.css" rel="stylesheet">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/icons/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/icons/180.png">
-    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="manifest" href="../manifest.webmanifest">
   </head>
   <body class="page__body">
 
@@ -54,26 +53,26 @@
 
         <div class="main-form__programs programs-selection">
           <input class="programs-selection__input input visually-hidden" type="radio" id="slimming" name="program" value="slimming" checked>
-          <label class="programs-selection__label label" for="sliming">Похудение</label>
-          <input class="programs-selection__input input visually-hidden" type="radio" id="weight" name="program" value="weight">
-          <label class="programs-selection__label label" for="weight">Набор массы</label>
+          <label class="programs-selection__label label" for="slimming">Похудение</label>
+          <input class="programs-selection__input input visually-hidden" type="radio" id="weight-gain" name="program" value="weight">
+          <label class="programs-selection__label label" for="weight-gain">Набор массы</label>
           <input class="programs-selection__input input visually-hidden" type="radio" id="advice" name="program" value="advice">
           <label class="programs-selection__label label" for="advice">Не знаю (Нужен ваш совет)</label>
         </div>
 
-        <fieldset class="main-form__fieldset contact-information">
+        <fieldset class="main-form__fieldset contact-information fieldset">
           <legend class="contact-information__legend legend">Контактные данные (владельца кота)</legend>
           <label class="contact-information__label label" for="email">E-mail:*</label>
           <input class="contact-information__input input" type="email" id="email" name="email" required placeholder="кuklachev@gmail.com">
         </fieldset>
 
-        <fieldset class="main-form__fieldset comment">
+        <fieldset class="main-form__fieldset comment fieldset">
           <legend class="comment__legend legend">Комментарий</legend>
           <label class="comment__label label visually-hidden" for="comment">Комментарий</label>
           <textarea class="comment__textarea textarea" id="comment" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
         </fieldset>
 
-        <fieldset class="main-form__fieldset additionally">
+        <fieldset class="main-form__fieldset additionally fieldset">
           <legend class="additionally__legend legend">Дополнительно</legend>
           <input class="additionally__input input visually-hidden" type="checkbox" id="sweetener" name="additionally" value="sweetener" checked>
           <label class="additionally__label label" for="sweetener">Сахарозаменитель</label>
