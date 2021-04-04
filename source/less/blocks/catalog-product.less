@@ -1,0 +1,102 @@
+.catalog-product:not(.catalog-product:last-child) {
+  border-bottom: 1px solid @special__light-grey-two;
+}
+
+.catalog-product:last-child {
+  border-bottom: 1px solid @special__light-grey-two;
+}
+
+.catalog-product__wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  width: 280px;
+  margin: 0 auto;
+  padding: 19px 20px 25px;
+}
+
+.catalog-product:last-child .catalog-product__wrapper {
+  position: relative;
+  padding: 78px 20px 25px;
+  text-align: center;
+  &::before {
+    position: absolute;
+    top: 39px;
+    left: 141px;
+    content: "";
+    width: 30px;
+    height: 2px;
+    background-color: @special__grey-three;
+  }
+  &::after {
+    position: absolute;
+    top: 39px;
+    left: 141px;
+    content: "";
+    width: 30px;
+    height: 2px;
+    background-color: @special__grey-three;
+    transform: rotate(90deg);
+  }
+}
+
+.catalog-product__image {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  margin: auto;
+}
+
+.catalog-product__list {
+  grid-column-start: 2;
+  grid-column-end: -1;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  margin: 0;
+}
+
+.catalog-product__title {
+  width: 76px;
+  margin: 0;
+  margin-bottom: 18px;
+  padding: 0;
+  font-family: "Oswald", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: @special__dark-grey-three;
+  text-transform: uppercase;
+}
+
+.catalog-product__title--last {
+  width: auto;
+  margin: 0 0 8px;
+  color: @basic__black-two;
+}
+
+.catalog-product__item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.catalog-product__description {
+  margin: 0;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.catalog-product__button {
+  grid-column-start: 1;
+  grid-column-end: -1;
+  grid-row-start: 2;
+  grid-row-end: -1;
+  margin-top: 22px;
+}
+
+.button--show-all {
+  color: @special__dark-grey-two;
+  background-color: @basic__grey;
+}

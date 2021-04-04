@@ -1,0 +1,294 @@
+.programs__wrapper {
+  margin: 0 auto 27px;
+  padding: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+    padding: 0 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 82px 110px 0;
+  }
+
+}
+
+.programs__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+}
+
+.programs__item {
+  position: relative;
+  margin-bottom: 20px;
+  padding: 30px 20px 18px;
+  background-color: @basic__grey;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: auto 275px;
+    padding: 77px 62px 53px 52px;
+
+    &:first-child::before {
+      grid-column-start: 2;
+      grid-column-end: -1;
+      position: absolute;
+      top: 81px;
+      right: 30px;
+      content: "";
+      width: 140px;
+      height: 192px;
+      background: url(../../img/icons/slimming-cats.svg) no-repeat;
+      background-size: 140px 192px;
+      z-index: 1;
+    }
+
+    &:nth-child(2)::before {
+      grid-column-start: 2;
+      grid-column-end: -1;
+      position: absolute;
+      top: 85px;
+      right: -30px;
+      content: "";
+      width: 268px;
+      height: 212px;
+      background: url(../../img/icons/cats-gain-weight.svg)  no-repeat;
+      background-size: 268px 212px;
+      z-index: 1;
+    }
+
+    &::after {
+      grid-column-start: 2;
+      grid-column-end: -1;
+      position: absolute;
+      top: 92px;
+      right: 0;
+      content: "";
+      width: 200px;
+      height: 200px;
+      background-color: @basic__green;
+      border-radius: 50%;
+    }
+
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    width: 570px;
+    margin: 0 80px 0 0;
+    padding: 77px 52px 59px;
+
+    &:nth-child(2) {
+      margin-right: 0;
+    }
+
+    &:first-child::before {
+      display: none;
+    }
+
+    &:nth-child(2)::before {
+      display: none;
+    }
+
+    &::after {
+      display: none;
+    }
+
+  }
+
+}
+
+.programs__title {
+  margin: 0;
+  margin-left: 71px;
+  padding: 0;
+  font-family: "Oswald", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 37px;
+  text-transform: uppercase;
+  color: @basic__black;
+
+  &::after {
+    position: absolute;
+    top: 24px;
+    left: 22px;
+    content: "";
+    width: 50px;
+    height: 50px;
+    background-color: @basic__green;
+    border-radius: 50%;
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+
+    @media (min-width: @desktop-width) {
+      display: block;
+      top: 41px;
+      left: 52px;
+      width: 100px;
+      height: 100px;
+    }
+
+  }
+
+  @media (min-width: @tablet-width) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    margin: 0 0 24px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    margin: 0 0 73px 162px;
+  }
+
+}
+
+.programs__item:first-child .programs__title::before {
+  position: absolute;
+  top: 21px;
+  left: 29px;
+  content: "";
+  width: 50px;
+  height: 53px;
+  background: url(../../img/icons/slimming-cats.svg) no-repeat;
+  z-index: 1;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    top: 34px;
+    left: 71px;
+    width: 70px;
+    height: 97px;
+    background-size: 70px 97px;
+  }
+
+}
+
+.programs__item:nth-child(2) .programs__title::before {
+  position: absolute;
+  top: 35px;
+  left: 13px;
+  content: "";
+  width: 67px;
+  height: 50px;
+  background: url(../../img/icons/cats-gain-weight.svg) no-repeat;
+  z-index: 1;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    top: 67px;
+    left: 36px;
+    width: 134px;
+    height: 56px;
+    background-size: 134px 56px;
+  }
+
+}
+
+.programs__description {
+  position: relative;
+  margin-bottom: 19px;
+  padding: 0 20px;
+  padding-bottom: 23px;
+  border-bottom: 1px solid @special__grey-two;
+
+  @media (min-width: @tablet-width) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    margin: 0 0 52px;
+    padding: 0;
+    font-size: 16px;
+    line-height: 24px;
+    color: @basic__black;
+    border: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 23px;
+  }
+
+}
+
+.programs__button {
+
+  &-text {
+
+    position: relative;
+    padding-right: 41px;
+    font-family: "Oswald", Arial, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: @basic__black;
+
+    &::before {
+      position: absolute;
+      top: 11px;
+      right: 6px;
+      content: "";
+      width: 18px;
+      height: 2px;
+      background-color: @basic__black;
+    }
+
+    &::after {
+      position: absolute;
+      top: 7px;
+      right: -8px;
+      content: "";
+      border-left: 7px solid @basic__black;
+      border-top: 5px solid transparent;
+      border-bottom: 5px solid transparent;
+      border-right: 7px solid transparent;
+    }
+
+    @media (min-width: @tablet-width) {
+      padding-right: 49px;
+      font-size: 20px;
+      line-height: 30px;
+
+      &::before {
+        top: 15px;
+        right: 6px;
+      }
+
+      &::after {
+        top: 11px;
+        right: -8px;
+      }
+
+    }
+
+  }
+
+  @media (min-width: @tablet-width) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+
+}
