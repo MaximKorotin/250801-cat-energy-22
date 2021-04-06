@@ -2,8 +2,9 @@
   position: relative;
   background-color: @basic__grey;
 
-  &-index {
+  &--index {
     position: relative;
+    background-color: transparent;
   }
 
   @media (min-width: @desktop-width) {
@@ -11,13 +12,11 @@
     padding: 95px 0 0 110px;
     background-color: transparent;
 
-    &-index {
+    &--index {
       min-height: 305px;
       padding: 95px 0 0 110px;
     }
-
   }
-
 }
 
 .contacts__wrapper {
@@ -35,14 +34,13 @@
     padding: 66px 89px 59px 76px;
     background-color: @basic__white;
   }
-
 }
 
 .contacts__title {
   width: 140px;
   margin: 0;
   padding: 0;
-  font-family: "Oswald", Arial, sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 18px;
@@ -54,7 +52,6 @@
     font-size: 20px;
     line-height: 21px;
   }
-
 }
 
 .contacts__description {
@@ -75,66 +72,22 @@
     &-address {
       margin-bottom: 10px;
     }
-
   }
 
   @media (min-width: @desktop-width) {
     text-align: start;
   }
-
 }
 
 .contacts__map {
-
-  &-mobile {
-    display: block;
-    margin: 0 auto;
-  }
-
-  &-tablet {
-    display: none;
-  }
-
-  &-desktop {
-    display: none;
-  }
-
-  @media (min-width: @tablet-width) {
-
-    &-mobile {
-      display: none;
-    }
-
-    &-tablet {
-      display: block;
-      margin: 0 auto;
-    }
-
-    &-desktop {
-      display: none;
-    }
-
-  }
+  display: block;
+  margin: 0 auto;
 
   @media (min-width: @desktop-width) {
-
-    &-mobile {
-      display: none;
-    }
-
-    &-tablet {
-      display: none;
-    }
-
-    &-desktop {
-      position: absolute;
-      top: 0;
-      left: 0;
-      display: block;
-      margin: 0 auto;
-      z-index: -1;
-    }
-
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+    z-index: -1;
   }
-
 }

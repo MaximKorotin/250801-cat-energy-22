@@ -1,10 +1,10 @@
 .selection {
   position: relative;
-  font-family: "Oswald", Arial, sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
   text-align: center;
   color: @basic__white;
-  background: url(../../img/index-background-mobile.jpg) no-repeat 50% 0;
+  background: url("../img/index-background-mobile.jpg") no-repeat 50% 0;
   z-index: -1;
 
   &::after {
@@ -25,18 +25,16 @@
     &::after {
       display: none;
     }
-
   }
 
   @media (min-width: @desktop-width) {
     margin-bottom: 30px;
   }
-
 }
 
 .selection__wrapper {
   margin: 0 auto;
-  padding:27px 0 22px 0;
+  padding: 27px 0 22px 0;
 
   @media (min-width: @tablet-width) {
     display: grid;
@@ -49,7 +47,6 @@
     grid-template-rows: 82px auto auto auto auto;
     padding: 8px 190px 22px;
   }
-
 }
 
 .selection-title {
@@ -73,7 +70,6 @@
     grid-column-start: 1;
     grid-column-end: 2;
   }
-
 }
 
 .selection__description {
@@ -98,66 +94,29 @@
     grid-column-start: 1;
     grid-column-end: 2;
   }
-
 }
 
 .selection__images {
-
-  &-mobile {
-    display: block;
-    margin: 0 auto 3px;
-  }
-
-  &-tablet {
-    display: none;
-  }
-
-  &-desktop {
-    display: none;
-  }
+  display: block;
+  margin: 0 auto 3px;
 
   @media (min-width: @tablet-width) {
-
-    &-mobile {
-      display: none;
-    }
-
-    &-tablet {
-      grid-row-start: 3;
-      grid-row-end: 4;
-      grid-column-start: 1;
-      grid-column-end: -1;
-      display: block;
-      margin: 0 auto;
-    }
-
-    &-desktop {
-      display: none;
-    }
-
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: -1;
+    display: block;
+    margin: 0 auto;
   }
 
   @media (min-width: @desktop-width) {
-
-    &-mobile {
-      display: none;
-    }
-
-    &-tablet {
-      display: none;
-    }
-
-    &-desktop {
-      grid-row-start: 1;
-      grid-row-end: -1;
-      grid-column-start: 2;
-      grid-column-end: -1;
-      display: block;
-      margin-left: 368px;
-    }
-
+    grid-row-start: 1;
+    grid-row-end: -1;
+    grid-column-start: 2;
+    grid-column-end: -1;
+    display: block;
+    margin-left: 368px;
   }
-
 }
 
 .selection__button {
@@ -177,5 +136,4 @@
     grid-column-start: 1;
     grid-column-end: 2;
   }
-
 }

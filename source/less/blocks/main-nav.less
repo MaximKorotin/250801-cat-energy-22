@@ -15,12 +15,11 @@
     display: flex;
     flex-wrap: wrap;
   }
-
 }
 
 .main-nav__item {
   padding: 22px 0 24px;
-  font-family: "Oswald", Arial, sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-weight: 500;
   font-size: 20px;
   line-height: 20px;
@@ -49,7 +48,6 @@
     font-size: 20px;
     line-height: 30px;
   }
-
 }
 
 .main-nav__link {
@@ -62,7 +60,6 @@
       padding-bottom: 8px;
       border-bottom: 2px solid @basic__green;
     }
-
   }
 
   @media (min-width: @desktop-width) {
@@ -73,9 +70,7 @@
       padding-bottom: 6px;
       border-bottom: 2px solid @basic__white;
     }
-
   }
-
 }
 
 .main-nav__toggle {
@@ -96,6 +91,7 @@
     height: 2px;
     background-color: @basic__black;
   }
+
   &::after {
     content: "";
     position: absolute;
@@ -113,16 +109,14 @@
     width: 20px;
     height: 20px;
     border: none;
-    background: url(../../img/icons/cross.svg) no-repeat;
+    background: url("../img/icons/cross.svg") no-repeat;
 
     @media (min-width: @tablet-width) {
       display: none;
     }
-
   }
 
   @media (min-width: @tablet-width) {
     display: none;
   }
-
 }
