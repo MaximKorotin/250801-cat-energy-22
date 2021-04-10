@@ -1,0 +1,45 @@
+.main-form__comment {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.comment__textarea {
+  height: 150px;
+  margin: 0 20px;
+  padding: 16px 16px 12px;
+  resize: none;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: @special__dark-grey-two;
+  border: 1px solid @basic__grey-three;
+
+  @media (min-width: @tablet-width) {
+    height: 174px;
+    margin: 0 67px 0 70px;
+    padding: 10px 19px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1182px;
+    margin: 0 auto;
+  }
+}
+
+.comment__textarea::placeholder {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: @special__dark-grey-two;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}

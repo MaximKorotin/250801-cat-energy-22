@@ -1,0 +1,106 @@
+.additional-good {
+  padding: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
+}
+
+.additional-good:first-child .additional-good__wrapper {
+  border-top: 1px solid @special__grey;
+}
+
+.additional-good:last-child .additional-good__wrapper {
+  border-bottom: 1px solid @special__grey;
+}
+
+.additional-good__wrapper {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 13px 0 19px;
+  border-bottom: 1px solid @special__grey;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto;
+    max-width: none;
+    padding: 26px 38px 28px;
+    border: 1px solid @special__grey;
+    border-bottom: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0 16px;
+    border: none;
+    border-bottom: 1px solid @special__grey;
+  }
+}
+
+.additional-good__title {
+  margin: 0 0 13px;
+  padding: 0;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: @special__dark-grey-three;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    margin-bottom: 28px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 165px;
+    margin: 0 159px 0 0;
+  }
+}
+
+.additional-good__list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 15px;
+  padding: 0;
+  line-height: 14px;
+
+  @media (min-width: @tablet-width) {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-bottom: 24px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    min-width: 288px;
+    margin: 0 38px 0 0;
+  }
+}
+
+.additional-good__designation {
+  @media (min-width: @tablet-width) {
+    margin-left: 49px;
+  }
+}
+
+.additional-good__button {
+  grid-column-start: 1;
+  grid-column-end: -1;
+
+  @media (min-width: @desktop-width) {
+    min-width: 244px;
+    height: 40px;
+  }
+}

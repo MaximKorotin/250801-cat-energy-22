@@ -9,17 +9,24 @@
 
   @media (min-width: @desktop-width) {
     min-height: 305px;
-    padding: 95px 0 0 110px;
-    background-color: transparent;
+    background-color: @basic__grey;
+    z-index: -1;
 
     &--index {
       min-height: 305px;
-      padding: 95px 0 0 110px;
     }
   }
 }
 
 .contacts__wrapper {
+  @media (min-width: @desktop-width) {
+    width: 1220px;
+    margin: 0 auto;
+    padding: 95px 110px 104px;
+  }
+}
+
+.contacts__container {
   display: flex;
   justify-content: space-between;
   margin: 0;

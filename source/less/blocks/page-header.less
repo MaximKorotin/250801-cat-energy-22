@@ -1,28 +1,30 @@
 .page-header {
   position: relative;
 
-  @media (min-width: @desktop-width) {
-    &::before {
-      position: absolute;
-      top: 0;
-      left: 0;
-      content: "";
-      width: 100%;
-      height: 696px;
-      background: url("../img/index-background-desktop.jpg") no-repeat 100%;
-      z-index: -1;
-    }
+  &--index {
+    @media (min-width: @desktop-width) {
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        content: "";
+        width: 100%;
+        height: 696px;
+        background: url("../img/index-background-desktop.jpg") no-repeat;
+        z-index: -1;
+      }
 
-    &::after {
-      position: absolute;
-      top: 0;
-      right: 0;
-      content: "";
-      width: 50%;
-      height: 696px;
-      background-color: @basic__green;
-      opacity: 0.85;
-      z-index: -1;
+      &::after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        content: "";
+        width: 50%;
+        height: 696px;
+        background-color: @basic__green;
+        opacity: 0.85;
+        z-index: -1;
+      }
     }
   }
 }
@@ -41,6 +43,7 @@
   @media (min-width: @desktop-width) {
     display: flex;
     justify-content: space-between;
+    width: 1220px;
     padding: 33px 110px 0;
   }
 }
