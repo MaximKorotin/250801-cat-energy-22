@@ -1,0 +1,40 @@
+.page-footer {
+  background-color: @basic__grey;
+}
+
+.page-footer__wrapper {
+  position: relative;
+  margin: 0 auto;
+  padding-top: 39px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 30px 64px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1220px;
+    padding: 60px 110px 64px;
+  }
+}
+
+.page-footer__logo {
+  display: flex;
+  margin-bottom: 32px;
+
+  &--text {
+    display: flex;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+
+    &--text {
+      width: 128px;
+      height: 24px;
+    }
+  }
+}

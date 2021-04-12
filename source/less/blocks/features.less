@@ -1,0 +1,181 @@
+.features__wrapper {
+  margin: 0 auto;
+  padding: 0 20px 22px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    padding: 45px 30px 0;
+    border-bottom: 1px solid @basic__grey-two;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1220px;
+    margin: 0 auto;
+    padding: 71px 110px 0;
+    border: none;
+  }
+}
+
+.features__title {
+  margin: 0;
+  margin-bottom: 38px;
+  padding: 0;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+  color: @basic__black;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 0 72px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+
+.features__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: section;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 60px;
+    row-gap: 31px;
+    width: 708px;
+    margin: 0 auto;
+    counter-reset: section;
+  }
+
+  @media (min-width: @desktop-width) {
+    column-gap: 80px;
+    width: 100%;
+  }
+}
+
+.features__item {
+  position: relative;
+  height: 60px;
+  margin-bottom: 20px;
+  padding: 2px 0 4px 80px;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 60px;
+    height: 60px;
+  }
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    width: 324px;
+    height: auto;
+    min-height: 286px;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    line-height: 24px;
+
+    &::before {
+      width: 80px;
+      height: 80px;
+    }
+
+    &::after {
+      position: absolute;
+      top: -40px;
+      counter-increment: section;
+      content: "" counter(section);
+      font-family: "Oswald", "Arial", sans-serif;
+      font-weight: 400;
+      font-size: 280px;
+      line-height: 280px;
+      color: @basic__grey;
+      z-index: -1;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 245px;
+    min-height: 250px;
+    margin: 0;
+  }
+}
+
+.features__item--leaf::before {
+  background: @basic__green url("../img/icons/icon-leaf.svg") no-repeat 50%;
+}
+
+.features__item--tub::before {
+  background: @basic__green url("../img/icons/icon-tub.svg") no-repeat 50%;
+}
+
+.features__item--eat::before {
+  background: @basic__green url("../img/icons/icon-eat.svg") no-repeat 50%;
+}
+
+.features__item--alarm::before {
+  background: @basic__green url("../img/icons/icon-alarm.svg") no-repeat 50%;
+}
+
+.features__item--leaf::after {
+  @media (min-width: @tablet-width) {
+    right: 95px;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: 15px;
+  }
+}
+
+.features__item--tub::after {
+  @media (min-width: @tablet-width) {
+    right: 80px;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: 5px;
+  }
+}
+
+.features__item--eat::after {
+  @media (min-width: @tablet-width) {
+    right: 80px;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: 0;
+  }
+}
+
+.features__item--alarm::after {
+  @media (min-width: @tablet-width) {
+    right: 75px;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: -5px;
+  }
+}
+
+.features__description {
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    width: 250px;
+    margin: 0;
+    padding-top: 111px;
+  }
+}
+
+.features__item br {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+}
