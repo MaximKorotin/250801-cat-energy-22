@@ -18,15 +18,16 @@
 
         <div class="page-header__wrapper">
 
-          <a class="page-header__logo page-header__logo--mobile logo" href="index.html">
-            <img class="logo__image" src="img/logos/logo-mobile.png" width="33" height="37" alt="Логотип кат энерджи">
-            <img class="logo__text" src="img/logos/logo-text.svg" width="101" height="18" alt="Название кат энерджи">
-          </a>
-
           <nav class="main-nav">
-            <button class="main-nav__toggle" type="button">
-              <span class="visually-hidden">Открыть меню</span>
-            </button>
+            <div class="main-nav__wrapper">
+              <a class="page-header__logo page-header__logo--mobile logo" href="index.html">
+                <img class="logo__image" src="img/logos/logo-mobile.png" width="33" height="37" alt="Логотип кат энерджи">
+                <img class="logo__text" src="img/logos/logo-text.svg" width="101" height="18" alt="Название кат энерджи">
+              </a>
+              <button class="main-nav__toggle" type="button">
+                <span class="visually-hidden">Открыть меню</span>
+              </button>
+            </div>
             <ul class="main-nav__list">
               <li class="main-nav__item">
                 <a class="main-nav__link" href="index.html">Главная</a>
@@ -191,25 +192,25 @@
                   <img class="catalog-product__image" src="img/catalog-7-mobile.png" width="72" height="84" alt="500 граммовая банка функционального питания для котов Cat Energy Slim со вкусом риса">
                   <h2 class="catalog-product__title">Cat Energy SLIM 500 г</h2>
                   <dl class="catalog-product__list">
-                  <div class="catalog-product__item">
-                    <dt class="catalog-product__term">Масса</dt>
-                    <dd class="catalog-product__designation">500 г</dd>
-                  </div>
-                  <div class="catalog-product__item">
-                    <dt class="catalog-product__term">Вкус</dt>
-                    <dd class="catalog-product__designation">Рис</dd>
-                  </div>
-                  <div class="catalog-product__item">
-                    <dt class="catalog-product__term">Цена</dt>
-                    <dd class="catalog-product__designation">500 Р.</dd>
-                  </div>
+                    <div class="catalog-product__item">
+                      <dt class="catalog-product__term">Масса</dt>
+                      <dd class="catalog-product__designation">500 г</dd>
+                    </div>
+                    <div class="catalog-product__item">
+                      <dt class="catalog-product__term">Вкус</dt>
+                      <dd class="catalog-product__designation">Рис</dd>
+                    </div>
+                    <div class="catalog-product__item">
+                      <dt class="catalog-product__term">Цена</dt>
+                      <dd class="catalog-product__designation">500 Р.</dd>
+                    </div>
                   </dl>
                   <a class="catalog-product__button button" href="#">Заказать</a>
                 </div>
               </li>
 
-              <li class="catalog-products__item catalog-product">
-                <div class="catalog-product__wrapper">
+              <li class="catalog-products__item catalog-product catalog-product--show">
+                <div class="catalog-product__wrapper catalog-product__wrapper--show">
                   <h2 class="catalog-product__title catalog-product__title--last">Показать еще 100500 товаров</h2>
                   <p class="catalog-product__description">На самом деле вкусов гораздо больше!</p>
                   <a class="catalog-product__button button button--show-all" href="#">Показать все</a>

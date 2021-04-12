@@ -42,12 +42,15 @@
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
+    column-gap: 60px;
+    row-gap: 31px;
     width: 708px;
     margin: 0 auto;
     counter-reset: section;
   }
 
   @media (min-width: @desktop-width) {
+    column-gap: 80px;
     width: 100%;
   }
 }
@@ -72,24 +75,10 @@
     width: 324px;
     height: auto;
     min-height: 286px;
-    margin: 0 60px 31px 0;
+    margin: 0;
     padding: 0;
     font-size: 16px;
     line-height: 24px;
-
-    &:nth-child(2),
-    &:nth-child(4),
-    &:nth-child(6),
-    &:nth-child(8),
-    &:nth-child(10),
-    &:nth-child(12) {
-      margin-right: 0;
-    }
-
-    &:nth-last-child(1),
-    &:nth-last-child(2) {
-      margin-bottom: 0;
-    }
 
     &::before {
       width: 80px;
@@ -113,45 +102,27 @@
   @media (min-width: @desktop-width) {
     width: 245px;
     min-height: 250px;
-    margin: 80px 80px 0 0;
-
-    &:nth-child(1),
-    &:nth-child(2),
-    &:nth-child(3),
-    &:nth-child(4) {
-      margin-top: 0;
-    }
-
-    &:nth-child(2),
-    &:nth-child(6) {
-      margin-right: 80px;
-    }
-
-    &:nth-child(4),
-    &:nth-child(8),
-    &:nth-child(12) {
-      margin-right: 0;
-    }
+    margin: 0;
   }
 }
 
-.features__item:nth-child(1)::before {
+.features__item--leaf::before {
   background: @basic__green url("../img/icons/icon-leaf.svg") no-repeat 50%;
 }
 
-.features__item:nth-child(2)::before {
+.features__item--tub::before {
   background: @basic__green url("../img/icons/icon-tub.svg") no-repeat 50%;
 }
 
-.features__item:nth-child(3)::before {
+.features__item--eat::before {
   background: @basic__green url("../img/icons/icon-eat.svg") no-repeat 50%;
 }
 
-.features__item:nth-child(4)::before {
+.features__item--alarm::before {
   background: @basic__green url("../img/icons/icon-alarm.svg") no-repeat 50%;
 }
 
-.features__item:nth-child(1)::after {
+.features__item--leaf::after {
   @media (min-width: @tablet-width) {
     right: 95px;
   }
@@ -161,7 +132,7 @@
   }
 }
 
-.features__item:nth-child(2)::after {
+.features__item--tub::after {
   @media (min-width: @tablet-width) {
     right: 80px;
   }
@@ -171,7 +142,7 @@
   }
 }
 
-.features__item:nth-child(3)::after {
+.features__item--eat::after {
   @media (min-width: @tablet-width) {
     right: 80px;
   }
@@ -181,7 +152,7 @@
   }
 }
 
-.features__item:nth-child(4)::after {
+.features__item--alarm::after {
   @media (min-width: @tablet-width) {
     right: 75px;
   }

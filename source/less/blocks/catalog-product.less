@@ -4,6 +4,11 @@
   @media (min-width: @tablet-width) {
     margin: 0 auto;
     border: none;
+
+    &--show {
+      display: flex;
+      align-items: flex-end;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -25,10 +30,10 @@
     flex-direction: column;
     justify-content: flex-end;
     width: 248px;
-    min-height: 430px;
+    min-height: 512px;
     margin: 0;
     padding: 0 38px 40px;
-    background-color: @basic__grey;
+    background-image: linear-gradient(@basic__white 81px, @basic__grey 81px);
   }
 
   @media (min-width: @desktop-width) {
@@ -37,15 +42,18 @@
   }
 }
 
-.catalog-product:last-child .catalog-product__wrapper {
+.catalog-product__wrapper--show {
   position: relative;
+  display: flex;
+  flex-direction: column;
   padding: 78px 20px 25px;
   text-align: center;
 
   &::before {
     position: absolute;
     top: 39px;
-    left: 141px;
+    left: 50%;
+    transform: translateX(-50%);
     content: "";
     width: 30px;
     height: 2px;
@@ -55,18 +63,16 @@
   &::after {
     position: absolute;
     top: 39px;
-    left: 141px;
+    left: 50%;
     content: "";
     width: 30px;
     height: 2px;
     background-color: @special__grey-three;
-    transform: rotate(90deg);
+    transform: translateX(-50%) rotate(90deg);
   }
 
   @media (min-width: @tablet-width) {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    min-height: 429px;
     padding: 0 38px 40px;
     background-color: transparent;
     background-image: none;
@@ -75,14 +81,12 @@
 
     &::before {
       top: 82px;
-      left: 42%;
       width: 60px;
       height: 2px;
     }
 
     &::after {
       top: 82px;
-      left: 42%;
       width: 60px;
       height: 2px;
     }
@@ -97,9 +101,7 @@
   margin: auto;
 
   @media (min-width: @tablet-width) {
-    position: absolute;
-    top: 0;
-    left: 45%;
+    margin: auto;
   }
 }
 
@@ -121,7 +123,7 @@
 
   @media (min-width: @tablet-width) {
     width: 125px;
-    margin: 0 auto 21px;
+    margin: 34px auto 21px;
     font-size: 20px;
     line-height: 24px;
     text-align: center;

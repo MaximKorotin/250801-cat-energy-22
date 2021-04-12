@@ -8,23 +8,11 @@
         top: 0;
         right: 0;
         content: "";
-        width: 100%;
-        height: 696px;
-        background-image: url("../img/index-background-desktop.jpg");
-        background-repeat: no-repeat;
-        background-position-x: 50vw;
-        z-index: -1;
-      }
-
-      &::after {
-        position: absolute;
-        top: 0;
-        right: 0;
-        content: "";
         width: 50%;
-        height: 696px;
-        background-color: @basic__green;
-        opacity: 0.85;
+        height: 694px;
+        background-color: @special__green;
+        background-image: url("../img/index-background-desktop.png");
+        background-repeat: no-repeat;
         z-index: -1;
       }
     }
@@ -37,42 +25,12 @@
   margin: 0 auto;
 
   @media (min-width: @tablet-width) {
-    display: flex;
-    justify-content: space-between;
-    padding: 4px 30px 0;
+    padding: 20px 30px 0;
   }
 
   @media (min-width: @desktop-width) {
-    display: flex;
-    justify-content: space-between;
     width: 1220px;
     margin: 0 auto;
-    padding: 33px 110px 0;
-  }
-}
-
-.page-header__logo--mobile {
-  display: flex;
-  align-items: center;
-}
-
-.logo {
-  padding: 11px 20px;
-
-  @media (min-width: @tablet-width) {
-    min-width: 174px;
-    margin-right: 35px;
-    padding: 0;
-  }
-}
-
-.logo__text {
-  display: flex;
-  margin-right: 33px;
-  width: 100%;
-  height: 18px;
-
-  @media (min-width: @tablet-width) {
-    display: none;
+    padding: 49px 110px 0;
   }
 }
