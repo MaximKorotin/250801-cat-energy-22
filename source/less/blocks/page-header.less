@@ -2,35 +2,23 @@
   position: relative;
 
   &--index {
-    @media (min-width: @desktop-width) {
-      &::before {
-        position: absolute;
-        top: 0;
-        right: 0;
-        content: "";
-        width: 50%;
-        height: 694px;
-        background-color: @special__green;
-        background-image: url("../img/index-background-desktop.png");
-        background-repeat: no-repeat;
-        z-index: -1;
-      }
-    }
-  }
-}
+    // min-height: 302px;
+    // background-image: url("../img/index-background-mobile.png");
+    // background-repeat: no-repeat;
+    // background-size: 100%;
+    // background-position-y: bottom;
+    // z-index: -1;
 
-.page-header__wrapper {
-  position: relative;
-  width: auto;
-  margin: 0 auto;
+    // @media (min-width: @tablet-width) {
+    //   background: none;
+    // }
 
-  @media (min-width: @tablet-width) {
-    padding: 20px 30px 0;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: 1220px;
-    margin: 0 auto;
-    padding: 49px 110px 0;
+    // @media (min-width: @desktop-width) {
+    //   min-height: 694px;
+    //   background-image: url("../img/index-background-desktop.png");
+    //   background-repeat: no-repeat;
+    //   background-size: 50%;
+    //   background-position-x: right;
+    // }
   }
 }
