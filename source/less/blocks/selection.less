@@ -27,7 +27,7 @@
   @media (min-width: @desktop-width) {
     &::before {
       min-height: 694px;
-      margin-top: -141px;
+      margin-top: -145px;
       background-image: url("../img/index-background-desktop.png");
       background-repeat: no-repeat;
       background-size: 50%;
@@ -44,20 +44,20 @@
     position: relative;
     max-width: 1060px;
     min-height: 810px;
-    margin: 0;
+    margin: 0 auto;
     padding: 0 117px;
   }
 
   @media (min-width: @desktop-width) {
     width: 1060px;
     min-height: 471px;
-    margin: 0 auto;
-    padding: 82px 80px;
+    padding: 78px 80px 82px;
   }
 }
 
 .selection-title {
   margin: 0 0 25px;
+  padding: 0 20px;
   font-weight: 400;
   font-size: 36px;
   line-height: 36px;
@@ -65,6 +65,7 @@
   @media (min-width: @tablet-width) {
     width: 414px;
     margin-bottom: 41px;
+    padding: 0;
     font-size: 60px;
     line-height: 60px;
     color: @basic__black;
@@ -106,7 +107,7 @@
   @media (min-width: @tablet-width) {
     position: absolute;
     bottom: 0;
-    right: 0;
+    right: 85px;
     transform: translateX(55px);
     width: 709px;
     height: 609px;
@@ -115,7 +116,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    top: 0;
+    top: -4px;
     right: 275px;
     width: 552px;
     height: 499px;
@@ -127,7 +128,11 @@
 
   @media (min-width: @tablet-width) {
     width: 244px;
-    margin: 0;
+    margin: 0 0 0 -5px;
     z-index: 10;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
   }
 }

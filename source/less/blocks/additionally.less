@@ -1,4 +1,26 @@
+.main-form__additionally {
+  padding-top: 20px;
+
+  &::before {
+    top: 36px;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-top: 15px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 25px;
+
+    &::before {
+      top: 48px;
+    }
+  }
+}
+
 .main-form__additionally .main-form__title {
+  margin-bottom: 42px;
+
   @media (min-width: @tablet-width) {
     margin-bottom: 62px;
   }
@@ -8,19 +30,22 @@
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
+    column-gap: 62px;
+    row-gap: 42px;
+    margin-bottom: 59px;
     padding: 0 67px 0 70px;
   }
 
   @media (min-width: @desktop-width) {
     justify-content: space-between;
     width: 1220px;
-    margin: 0 auto;
+    margin: 0 auto 66px;
     padding: 0 110px;
   }
 }
 
 .additionally__wrapper {
-  margin-bottom: 25px;
+  margin-bottom: 24px;
   padding: 0 20px;
 
   &:last-child {
@@ -29,28 +54,16 @@
 
   @media (min-width: @tablet-width) {
     width: 282px;
-    margin: 0 60px 42px 0;
+    margin: 0;
     padding: 0;
 
-    &:nth-child(2) {
-      margin-right: 0;
-    }
-  }
-
-  @media (min-width: 821px) {
-    &:nth-child(2) {
-      margin-right: 60px;
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 
   @media (min-width: @desktop-width) {
     width: 245px;
-
-    &:nth-child(4),
-    &:nth-child(8),
-    &:nth-child(12) {
-      margin-right: 0;
-    }
   }
 }
 
@@ -58,14 +71,15 @@
   position: relative;
   padding-left: 45px;
   color: @special__dark-grey-three;
+  cursor: pointer;
 
   &::before {
     position: absolute;
-    top: -5px;
+    top: -4px;
     left: 0;
     content: "";
-    width: 30px;
-    height: 30px;
+    width: 28px;
+    height: 28px;
     border: 1px solid @special__grey;
   }
 
@@ -75,8 +89,8 @@
     &::before {
       top: -5px;
       left: 0;
-      width: 40px;
-      height: 40px;
+      width: 38px;
+      height: 38px;
     }
   }
 }
@@ -84,14 +98,24 @@
 .additionally__input:checked + .additionally__label::after {
   position: absolute;
   top: 4px;
-  left: 7px;
+  left: 6px;
   content: "";
   width: 18px;
   height: 14px;
-  background: url("../img/icons/icon-check.svg") no-repeat;
+  background: url("../img/icon-check.svg") no-repeat;
 
   @media (min-width: @tablet-width) {
-    top: 9px;
-    left: 12px;
+    top: 8px;
+    left: 11px;
   }
+}
+
+.additionally__input:hover + .additionally__label::before,
+.additionally__input:focus + .additionally__label::before,
+.additionally__input:disabled + .additionally__label::before {
+  border-color: @special__grey-five;
+}
+
+.additionally__input:disabled + .additionally__label {
+  opacity: 0.3;
 }

@@ -1,10 +1,10 @@
 .main-form__programs {
-  padding: 22px 20px 19px;
+  padding: 29px 19px 23px;
   border-bottom: 1px solid @special__grey-two;
 
   @media (min-width: @tablet-width) {
     margin: 0 67px 0 70px;
-    padding: 30px 28px;
+    padding: 30px 27px 29px;
     border: 1px solid @basic__grey-three;
   }
 
@@ -33,8 +33,9 @@
 
 .programs-selection__label {
   position: relative;
-  padding-left: 45px;
+  padding-left: 46px;
   color: @special__dark-grey-three;
+  cursor: pointer;
 
   &::before {
     position: absolute;
@@ -51,7 +52,7 @@
     padding-left: 60px;
 
     &::before {
-      top: -5px;
+      top: -7px;
       left: 0;
       width: 40px;
       height: 40px;
@@ -70,9 +71,19 @@
   border-radius: 50%;
 
   @media (min-width: @tablet-width) {
-    top: 7px;
+    top: 5px;
     left: 12px;
     width: 18px;
     height: 18px;
   }
+}
+
+.programs-selection__input:hover + .programs-selection__label::before,
+.programs-selection__input:focus + .programs-selection__label::before,
+.programs-selection__input:disabled + .programs-selection__label::before {
+  border-color: @special__grey-five;
+}
+
+.programs-selection__input:disabled + .programs-selection__label {
+  opacity: 0.3;
 }

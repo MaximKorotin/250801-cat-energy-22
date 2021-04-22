@@ -37,18 +37,19 @@
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: auto 275px;
-    padding: 77px 62px 53px 52px;
+    margin-bottom: 30px;
+    padding: 77px 62px 56px 52px;
 
     &:first-child::before {
       grid-column-start: 2;
       grid-column-end: -1;
       position: absolute;
       top: 81px;
-      right: 30px;
+      right: 89px;
       content: "";
       width: 140px;
       height: 192px;
-      background: url("../img/icons/slimming-cats.svg") no-repeat;
+      background: url("../img/slimming-cats.svg") no-repeat;
       background-size: 140px 192px;
       z-index: 1;
     }
@@ -58,11 +59,11 @@
       grid-column-end: -1;
       position: absolute;
       top: 85px;
-      right: -30px;
+      right: 25px;
       content: "";
       width: 268px;
       height: 212px;
-      background: url("../img/icons/cats-gain-weight.svg")  no-repeat;
+      background: url("../img/cats-gain-weight.svg")  no-repeat;
       background-size: 268px 212px;
       z-index: 1;
     }
@@ -72,7 +73,7 @@
       grid-column-end: -1;
       position: absolute;
       top: 92px;
-      right: 0;
+      right: 59px;
       content: "";
       width: 200px;
       height: 200px;
@@ -106,8 +107,7 @@
 }
 
 .programs__title {
-  margin: 0;
-  margin-left: 71px;
+  margin: 0 0 29px 71px;
   padding: 0;
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
@@ -132,7 +132,7 @@
 
     @media (min-width: @desktop-width) {
       display: block;
-      top: 41px;
+      top: 47px;
       left: 52px;
       width: 100px;
       height: 100px;
@@ -149,7 +149,7 @@
 
   @media (min-width: @desktop-width) {
     display: block;
-    margin: 0 0 73px 162px;
+    margin: 0 0 74px 162px;
   }
 }
 
@@ -160,7 +160,7 @@
   content: "";
   width: 50px;
   height: 53px;
-  background: url("../img/icons/slimming-cats.svg") no-repeat;
+  background: url("../img/slimming-cats.svg") no-repeat;
   z-index: 1;
 
   @media (min-width: @tablet-width) {
@@ -169,8 +169,8 @@
 
   @media (min-width: @desktop-width) {
     display: block;
-    top: 34px;
-    left: 71px;
+    top: 41px;
+    left: 67px;
     width: 70px;
     height: 97px;
     background-size: 70px 97px;
@@ -184,7 +184,7 @@
   content: "";
   width: 67px;
   height: 50px;
-  background: url("../img/icons/cats-gain-weight.svg") no-repeat;
+  background: url("../img/cats-gain-weight.svg") no-repeat;
   z-index: 1;
 
   @media (min-width: @tablet-width) {
@@ -194,7 +194,7 @@
   @media (min-width: @desktop-width) {
     display: block;
     top: 67px;
-    left: 36px;
+    left: 33px;
     width: 134px;
     height: 56px;
     background-size: 134px 56px;
@@ -203,28 +203,44 @@
 
 .programs__description {
   position: relative;
-  margin-bottom: 19px;
+  margin: 0 0 19px;
   padding-bottom: 23px;
   border-bottom: 1px solid @special__grey-two;
+
+  &--br {
+    display: none;
+  }
 
   @media (min-width: @tablet-width) {
     grid-column-start: 1;
     grid-column-end: 2;
+    width: 377px;
     margin: 0 0 52px;
     padding: 0;
     font-size: 16px;
     line-height: 24px;
     color: @basic__black;
     border: none;
+
+    &--br {
+      display: block;
+    }
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 23px;
+    width: auto;
+    margin-bottom: 26px;
+
+    &--br {
+      display: none;
+    }
   }
 }
 
 .programs__button {
-  &-text {
+  width: max-content;
+
+  &--text {
 
     position: relative;
     padding-right: 41px;
@@ -276,5 +292,30 @@
   @media (min-width: @tablet-width) {
     grid-column-start: 1;
     grid-column-end: 2;
+  }
+}
+
+.programs__button:hover .programs__button--text,
+.programs__button:focus .programs__button--text {
+  &::before {
+    right: -2px;
+    width: 26px;
+  }
+
+  &::after {
+    right: -16px;
+  }
+}
+
+.programs__button:active .programs__button--text {
+  opacity: 0.3;
+
+  &::before {
+    right: -2px;
+    width: 26px;
+  }
+
+  &::after {
+    right: -16px;
   }
 }
