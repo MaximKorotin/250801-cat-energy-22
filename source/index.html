@@ -25,14 +25,14 @@
             <source media="(min-width: 768px)" srcset="img/logos/logo-tablet.svg">
             <img class="logo__image" src="img/logos/logo-mobile.svg" width="33" height="37" alt="Логотип кат энерджи">
           </picture>
-          <img class="logo__text" src="img/logos/logo-text.svg" width="101" height="18" alt="Название кат энерджи">
+          <img class="logo__text logo__text--nojs" src="img/logos/logo-text.svg" width="101" height="18" alt="Название кат энерджи">
         </a>
+        <button class="main-nav__toggle main-nav__toggle--closed main-nav__toggle--nojs" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
       </div>
 
       <div class="main-nav__container main-nav__container--closed main-nav__container--nojs">
-        <button class="main-nav__toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
         <ul class="main-nav__list">
           <li class="main-nav__item">
             <a class="main-nav__link main-nav__link-index main-nav__link-index--current">Главная</a>
@@ -175,7 +175,7 @@
           </ul>
 
           <div class="compare__bar">
-            <label class="compare__label compare__label--before" for="before">Было</label>
+            <button class="compare__label compare__label--before" for="before" type="button">Было</button>
             <div class="compare__scale">
               <label class="compare__input-group">
                 <input class="compare__input" type="range" min="0" max="100" step="1" value="0">
@@ -183,7 +183,7 @@
                 <span class="compare__pin" style="left: 50%;"></span>
               </label>
             </div>
-            <label class="compare__label compare__label--after" for="after">Стало</label>
+            <button class="compare__label compare__label--after" for="after" type="button">Стало</button>
           </div>
 
         </div>
