@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
+  <link rel="preload" href="fonts/oswaldregular.woff2" crossorigin="anonymous" as="font">
   <link href="css/style.min.css" rel="stylesheet">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/icon.svg" type="image/svg+xml">
@@ -147,8 +148,8 @@
           <input class="compare__before-checker visually-hidden" id="before" type="radio" name="compare">
           <input class="compare__after-checker visually-hidden" id="after" type="radio" name="compare">
 
-          <ul class="compare__list">
-            <li class="compare__item compare__item--before" >
+          <ul class="compare__list compare__list--nojs">
+            <li class="compare__item compare__item--before compare__item--nojs" >
               <picture>
                 <source type="image/webp" media="(min-width: 1440px)" srcset="img/cat-fat.webp 1x, img/cat-fat@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/cat-fat.webp 1x, img/cat-fat@2x.webp 2x">
@@ -160,7 +161,7 @@
                   alt="Сидящий толстый котик с разноцветными глазами">
               </picture>
             </li>
-            <li class="compare__item compare__item--after" style="width: 0px;">
+            <li class="compare__item compare__item--after compare__item--nojs" style="width: 0px;">
               <picture>
                 <source type="image/webp" media="(min-width: 1440px)" srcset="img/cat-skinny.webp 1x, img/cat-skinny@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/cat-skinny.webp 1x, img/cat-skinny@2x.webp 2x">
@@ -170,6 +171,16 @@
                 <img class="compare__images compare__images--skinny compare__images--current" src="img/cat-skinny-mobile.png"
                   srcset="img/cat-skinny-mobile@2x.png 2x" width="251" height="240"
                   alt="Сидящий худой котик с разноцветными глазами">
+              </picture>
+            </li>
+            <li class="compare__item compare__item--duble-cat compare__item--yesjs">
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/image-cat-desktop.webp 1x, img/image-cat-desktop@2x.webp 2x">
+                <source type="image/webp" srcset="img/image-cat-tablet.webp 1x, img/image-cat-tablet@2x.webp 2x">
+                <source media="(min-width: 1440px)" srcset="img/image-cat-desktop.png 1x, img/image-cat-desktop@2x.png 2x">
+                <img class="compare__images compare__images--nojs" src="img/image-cat-tablet.png"
+                  srcset="img/image-cat-tablet@2x.png 2x" width="708" height="620"
+                  alt="Два кота, до применения корма и после">
               </picture>
             </li>
           </ul>

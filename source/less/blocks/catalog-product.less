@@ -106,9 +106,13 @@
 
 .catalog-product__image {
   &--small {
-    margin-top: 13px;
+    margin-top: 23px;
     width: 68px;
     height: 86px;
+  }
+
+  &--small-one {
+    margin-top: 13px;
   }
 
   &--big {
@@ -235,10 +239,14 @@
 
 .button--show-all {
   height: 39px;
-  margin: 87px 0 0;
+  margin: 22px 0 0;
   font-size: 16px;
   color: @special__dark-grey-two;
   background-color: @basic__grey;
+
+  @media (min-width: @tablet-width) {
+    margin: 87px 0 0;
+  }
 }
 
 .button--show-all:hover,
