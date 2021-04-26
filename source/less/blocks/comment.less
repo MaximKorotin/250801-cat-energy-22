@@ -1,12 +1,33 @@
 .main-form__comment {
   display: grid;
   grid-template-columns: 1fr;
+  padding-top: 25px;
+
+  &::before {
+    top: 39px;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-top: 16px;
+
+    &::before {
+      top: 38px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 27px;
+
+    &::before {
+      top: 50px;
+    }
+  }
 }
 
 .comment__textarea {
-  height: 150px;
+  height: 130px;
   margin: 0 20px;
-  padding: 16px 16px 12px;
+  padding: 10px 10px 12px 14px;
   resize: none;
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
@@ -17,7 +38,7 @@
   border: 1px solid @basic__grey-three;
 
   @media (min-width: @tablet-width) {
-    height: 174px;
+    height: 154px;
     margin: 0 67px 0 70px;
     padding: 10px 19px;
     font-size: 20px;
@@ -41,5 +62,19 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
+  }
+}
+
+.comment__textarea:hover {
+  border-color: @special__grey;
+}
+
+.comment__textarea:focus {
+  padding: 9px 9px 11px 13px;
+  border: 2px solid @special__dark-grey-two;
+  outline: none;
+
+  @media (min-width: @tablet-width) {
+    padding: 9px 18px;
   }
 }

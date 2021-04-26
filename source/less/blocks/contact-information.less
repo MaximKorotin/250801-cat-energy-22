@@ -9,6 +9,14 @@
   }
 }
 
+.contact-information__container:last-child .contact-information__wrapper {
+  @media (min-width: @desktop-width) {
+    &:last-child {
+      padding-left: 0;
+    }
+  }
+}
+
 .contact-information__wrapper {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -21,11 +29,18 @@
   }
 
   @media (min-width: @tablet-width) {
+    margin-bottom: 20px;
     padding: 0 67px 0 70px;
+
+    &:last-child {
+      margin-bottom: 0;
+      padding-left: 68px;
+    }
   }
 
   @media (min-width: @desktop-width) {
     width: 570px;
+    margin-bottom: 0;
     padding: 0;
   }
 }
@@ -42,8 +57,19 @@
   }
 }
 
+.contact-information__wrapper:last-child .contact-information__label {
+  @media (min-width: @tablet-width) {
+    margin-right: 16px;
+  }
+}
+
+.contact-information__container--input {
+  position: relative;
+}
+
 .contact-information__input {
-  padding: 16px 16px 12px;
+  width: fill-available;
+  padding: 13px 40px 12px 13px;
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -53,10 +79,14 @@
   border: 1px solid @basic__grey-three;
 
   @media (min-width: @tablet-width) {
-    padding: 10px 21px;
+    padding: 10px 45px 10px 21px;
     font-size: 20px;
     line-height: 30px;
     vertical-align: middle;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 19px;
   }
 }
 
@@ -75,12 +105,82 @@
   }
 }
 
-.contact-information__input::before {
+.contact-information__input:hover {
+  border-color: @special__grey;
+}
+
+.contact-information__input:focus {
+  padding: 12px 39px 11px 12px;
+  border: 2px solid @special__dark-grey-two;
+  outline: none;
+
+  @media (min-width: @tablet-width) {
+    padding: 9px 44px 9px 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 18px;
+  }
+}
+
+.contact-information__input.input__error {
+  padding: 12px 39px 11px 12px;
+
+  @media (min-width: @tablet-width) {
+    padding: 9px 44px 9px 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 18px;
+  }
+}
+
+.input__image {
   position: absolute;
-  top: 0;
-  right: 0;
-  content: "";
-  width: 18px;
-  height: 13px;
-  background: url("../img/icons/icon-email.svg") no-repeat;
+
+  &--email {
+    top: 16px;
+    right: 15px;
+  }
+
+  &--phone {
+    top: 13px;
+    right: 13px;
+  }
+
+  @media (min-width: @tablet-width) {
+    &--email {
+      top: 18px;
+      right: 18px;
+    }
+
+    &--phone {
+      top: 16px;
+      right: 17px;
+    }
+  }
+}
+
+.contact-information__input:focus + .input__image--email {
+  stroke: @basic__green;
+}
+
+.input__error + .input__image--email {
+  stroke: @status__error;
+}
+
+.input__error:hover + .input__image--email {
+  stroke: @special__dark-grey-three;
+}
+
+.contact-information__input:focus + .input__image--phone {
+  fill: @basic__green;
+}
+
+.input__error + .input__image--phone {
+  fill: @status__error;
+}
+
+.input__error:hover + .input__image--phone {
+  fill: @special__dark-grey-three;
 }
