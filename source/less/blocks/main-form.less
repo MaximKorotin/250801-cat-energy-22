@@ -61,21 +61,23 @@
   color: @basic__black;
   background-color: @basic__white;
 
+  &--contact {
+    width: 181px;
+  }
+
   @media (min-width: @tablet-width) {
     margin: 0 30px 75px;
     padding: 0 42px 0 39px;
     font-size: 36px;
     line-height: 36px;
+
+    &--contact {
+      width: max-content;
+    }
   }
 
   @media (min-width: @desktop-width) {
     margin: 0 70px 76px;
-  }
-}
-
-.main-form__title br {
-  @media (min-width: @tablet-width) {
-    display: none;
   }
 }
 

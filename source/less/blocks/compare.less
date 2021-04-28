@@ -172,6 +172,7 @@
   text-transform: uppercase;
   background-color: @special__light-grey;
   border: none;
+  cursor: pointer;
 
   &--before {
     padding-right: 60px;
@@ -186,13 +187,29 @@
     padding: 0 0 6px;
     font-size: 20px;
     background-color: inherit;
-    border-bottom: 1px dotted #c4c4c4;
+    border-bottom: 1px dotted @special__black-four;
     cursor: pointer;
   }
-}
 
-.compare--js .compare__label {
-  cursor: default;
+  &:hover,
+  &:focus {
+    color: @special__black-two;
+
+    @media (min-width: @tablet-width) {
+      color: @basic__black;
+      border-bottom: 1px solid @special__black-two;
+    }
+  }
+
+  &:active {
+    color: @special__black-four;
+
+    @media (min-width: @tablet-width) {
+      color: @basic__black;
+      border-bottom: none;
+      padding-bottom: 7px;
+    }
+  }
 }
 
 .compare__label::before {
@@ -203,7 +220,6 @@
   height: 12px;
   background-color: @basic__white;
   border: 1px solid @special__grey;
-  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     display: none;
@@ -301,10 +317,6 @@
   opacity: 0;
 }
 
-.compare--js .compare__input {
-  cursor: pointer;
-}
-
 .compare__pin {
   position: absolute;
   top: -1px;
@@ -317,6 +329,8 @@
   border: 1px solid @special__grey;
   border-radius: 50%;
   box-shadow: 0 1px 3px 0 @special__black-three;
+  cursor: pointer;
+  z-index: 1;
 
   &::before {
     position: absolute;
@@ -329,7 +343,13 @@
     border-radius: 50%;
   }
 
-  @media (min-width: @tablet-width) {
-    content: "";
+  &:hover,
+  &:focus {
+    box-shadow: 0 2px 4px 0 @special__black-four;
+  }
+
+  &:active {
+    border: 1px solid @basic__green;
+    box-shadow: 0 3px 5px 0 @special__black-four;
   }
 }

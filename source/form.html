@@ -26,7 +26,7 @@
             <source media="(min-width: 768px)" srcset="img/logos/logo-tablet.svg">
             <img class="logo__image" src="img/logos/logo-mobile.svg" width="33" height="37" alt="Логотип кат энерджи">
           </picture>
-          <img class="logo__text" src="img/logos/logo-text.svg" width="101" height="18" alt="Название кат энерджи">
+          <img class="logo__text logo__text--nojs" src="img/logos/logo-text.svg" width="101" height="18" alt="Название кат энерджи">
         </a>
         <button class="main-nav__toggle main-nav__toggle--closed main-nav__toggle--nojs" type="button">
           <span class="visually-hidden">Открыть меню</span>
@@ -67,7 +67,7 @@
               <input class="questionnaire__input input" type="text" id="name" name="name" required placeholder="Барсик">
             </div>
             <div class="questionnaire__wrapper">
-              <label class="questionnaire__label label" for="weight">Вес (кг):*</label>
+              <label class="questionnaire__label label questionnaire__label--weight" for="weight">Вес (кг):*</label>
               <input class="questionnaire__input input" type="text" id="weight" name="weight" required placeholder="7">
             </div>
             <div class="questionnaire__wrapper">
@@ -97,7 +97,7 @@
 
         <div class="main-form__contact-information contact-information main-form__wrapper">
           <div class="main-form__title-container">
-            <h2 class="main-form__title">Контактные данные<br> (владельца кота)</h2>
+            <h2 class="main-form__title main-form__title--contact">Контактные данные (владельца кота)</h2>
           </div>
           <div class="contact-information__container">
             <div class="contact-information__wrapper">
@@ -113,7 +113,7 @@
             <div class="contact-information__wrapper">
               <label class="contact-information__label label" for="phone">Телефон:*</label>
               <div class="contact-information__container--input">
-                <input class="contact-information__input input" type="tel" id="phone" name="phone" required
+                <input class="contact-information__input input input--phone" type="tel" id="phone" name="phone" required
                 placeholder="8 (960) 900-60-90">
                 <svg class="input__image input__image--phone" width="20" height="21" fill="#222222">
                   <use href="img/sprite.svg#icon-phone"></use>

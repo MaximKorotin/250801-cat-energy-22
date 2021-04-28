@@ -85,24 +85,20 @@
   padding: 0;
 
   &--closed {
-    height: 2px;
+    width: 24px;
+    height: 18px;
+    margin-top: -2px;
+    background-color: inherit;
     border: none;
-    background-color: @basic__black;
+    border-top: 2px solid @basic__black;
+    border-bottom: 2px solid @basic__black;
+    cursor: pointer;
+    box-sizing: border-box;
 
     &::before {
       content: "";
       position: absolute;
-      top: -8px;
-      right: 0;
-      width: 24px;
-      height: 2px;
-      background-color: @basic__black;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 8px;
+      top: 6px;
       right: 0;
       width: 24px;
       height: 2px;
@@ -115,6 +111,7 @@
     border: none;
     background: url("../img/cross.svg") no-repeat;
     background-position: center;
+    cursor: pointer;
   }
 
   &--nojs {
