@@ -1,3 +1,54 @@
 .page-header {
   position: relative;
 }
+
+.page-header__logo {
+  &--mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-right: 12px;
+  }
+}
+
+.logo {
+  @media (min-width: @tablet-width) {
+    min-width: 174px;
+    margin-right: 35px;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.logo__image {
+  @media (min-width: @tablet-width) {
+    width: 174px;
+    height: 52px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 202px;
+    height: 59px;
+  }
+}
+
+.logo__text {
+  margin: 0 auto;
+
+  &--nojs {
+    padding-right: 22px;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}

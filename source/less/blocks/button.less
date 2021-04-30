@@ -13,19 +13,19 @@
   border: none;
   cursor: pointer;
 
+  &:hover,
+  &:focus {
+    background-color: @basic__green-two;
+    outline: none;
+  }
+
+  &:active {
+    background-color: @basic__green-two;
+    color: @special__white;
+  }
+
   @media (min-width: @tablet-width) {
     height: 54px;
     font-size: 20px;
   }
-}
-
-.button:hover,
-.button:focus {
-  background-color: @basic__green-two;
-  outline: none;
-}
-
-.button:active {
-  background-color: @basic__green-two;
-  color: @special__white;
 }

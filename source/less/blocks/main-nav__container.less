@@ -1,16 +1,18 @@
-.main-nav__container--closed {
-  display: none;
+.main-nav__container {
+  &--closed {
+    display: none;
 
-  @media (min-width: @tablet-width) {
-    display: flex;
+    @media (min-width: @tablet-width) {
+      display: flex;
+    }
   }
-}
 
-.main-nav__container--nojs {
-  display: block;
+  &--nojs {
+    display: block;
 
-  @media (min-width: @tablet-width) {
-    display: flex;
+    @media (min-width: @tablet-width) {
+      display: flex;
+    }
   }
 }
 
@@ -44,6 +46,10 @@
   text-align: center;
   border-bottom: 1px solid @basic__grey-two;
 
+  &:first-child {
+    border-top: 1px solid @basic__grey-two;
+  }
+
   @media (min-width: @tablet-width) {
     display: flex;
     align-items: center;
@@ -53,19 +59,15 @@
     font-size: 18px;
     line-height: 24px;
     border: none;
+
+    &:first-child {
+      border: none;
+    }
   }
 
   @media (min-width: @desktop-width) {
     font-size: 20px;
     line-height: 30px;
-  }
-}
-
-.main-nav__item:first-child {
-  border-top: 1px solid @basic__grey-two;
-
-  @media (min-width: @tablet-width) {
-    border: none;
   }
 }
 
@@ -88,35 +90,35 @@
       padding-bottom: 6px;
     }
   }
-}
 
-.main-nav__link-index {
-  @media (min-width: @tablet-width) {
-    padding-bottom: 10px;
+  &--index {
+    @media (min-width: @tablet-width) {
+      padding-bottom: 10px;
 
-    &--current {
+      &-current {
+        padding-bottom: 8px;
+        border-bottom: 2px solid @basic__green;
+      }
+    }
+
+    @media (min-width: @desktop-width) {
       padding-bottom: 8px;
-      border-bottom: 2px solid @basic__green;
+      color: @basic__white;
+
+      &-current {
+        padding-bottom: 6px;
+        border-bottom: 2px solid @basic__white;
+      }
     }
   }
 
-  @media (min-width: @desktop-width) {
-    padding-bottom: 8px;
-    color: @basic__white;
-
-    &--current {
-      padding-bottom: 6px;
-      border-bottom: 2px solid @basic__white;
-    }
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+    outline: none;
   }
-}
 
-.main-nav__link:hover,
-.main-nav__link:focus {
-  opacity: 0.6;
-  outline: none;
-}
-
-.main-nav__link:active {
-  opacity: 0.3;
+  &:active {
+    opacity: 0.3;
+  }
 }
