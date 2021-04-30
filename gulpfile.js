@@ -25,13 +25,28 @@ const styles = () => {
       autoprefixer(),
       csso()
     ]))
-    .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
     .pipe(sync.stream());
 }
 
 exports.styles = styles;
+
+const stylesMin = () => {
+  return gulp.src("source/less/style.less")
+    .pipe(plumber())
+    .pipe(sourcemap.init())
+    .pipe(less())
+    .pipe(postcss([
+      autoprefixer()
+    ]))
+    .pipe(rename("style.min.css"))
+    .pipe(sourcemap.write("."))
+    .pipe(gulp.dest("build/css"))
+    .pipe(sync.stream());
+}
+
+exports.stylesMin = stylesMin;
 
 // HTML
 
@@ -48,12 +63,21 @@ exports.html = html;
 const scripts = () => {
   return gulp.src("source/js/script.js")
     .pipe(terser())
-    .pipe(rename("script.min.js"))
     .pipe(gulp.dest("build/js"))
     .pipe(sync.stream());
 }
 
 exports.scripts = scripts;
+
+const scriptsMin = () => {
+  return gulp.src("source/js/script.js")
+    .pipe(terser())
+    .pipe(rename("script.min.js"))
+    .pipe(gulp.dest("build/js"))
+    .pipe(sync.stream());
+}
+
+exports.scriptsMin = scriptsMin;
 
 // Images
 
@@ -101,8 +125,6 @@ exports.sprite = sprite;
 
 const copy = (done) => {
   gulp.src([
-    "source/css/style.css",
-    "source/js/script.js",
     "source/fonts/*.{woff2,woff}",
     "source/*.ico",
     "source/img/**/*.{jpg,png,svg}",
@@ -161,8 +183,10 @@ const build = gulp.series(
   optimizeImages,
   gulp.parallel(
     styles,
+    stylesMin,
     html,
     scripts,
+    scriptsMin,
     sprite,
     createWebp
   )
@@ -178,8 +202,10 @@ exports.default = gulp.series(
   copyImages,
   gulp.parallel(
     styles,
+    stylesMin,
     html,
     scripts,
+    scriptsMin,
     sprite,
     createWebp
   ),
