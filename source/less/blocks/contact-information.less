@@ -176,7 +176,8 @@
   stroke: @basic__green;
 }
 
-.contact-information__input:invalid + .input__image--email {
+.contact-information__input:invalid + .input__image--email,
+.input-error + .input__image--email {
   stroke: @status__error;
 }
 
@@ -184,6 +185,7 @@
   fill: @basic__green;
 }
 
-.contact-information__input:invalid + .input__image--phone {
+.contact-information__input:invalid + .input__image--phone,
+.input-error + .input__image--phone {
   fill: @status__error;
 }

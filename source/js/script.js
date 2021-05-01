@@ -2,6 +2,7 @@ var navMain = document.querySelector(".main-nav__container");
 var navToggle = document.querySelector(".main-nav__toggle");
 var navLogo = document.querySelector(".logo__text");
 var example = document.querySelector(".example");
+var form = document.querySelector(".main-form");
 
 navLogo.classList.remove("logo__text--nojs");
 navToggle.classList.remove("main-nav__toggle--nojs");
@@ -44,5 +45,43 @@ if (example) {
     before.classList.remove("compare__label--before-curent");
     fat.classList.remove("compare__item--before");
     rangePin.style.left = 402 + "px";
+  });
+}
+
+if (form) {
+  var Name = form.querySelector(".questionnaire__input--name");
+  var weight = form.querySelector(".questionnaire__input--weight");
+  var email = form.querySelector(".input--email");
+  var phone = form.querySelector(".input--phone");
+
+  Name.removeAttribute("required");
+  weight.removeAttribute("required");
+  email.removeAttribute("required");
+  phone.removeAttribute("required");
+
+  form.addEventListener("submit", (e) => {
+    if (!Name.value) {
+      e.preventDefault();
+      Name.classList.add("input-error");
+    }
+
+    if (!weight.value) {
+      e.preventDefault();
+      weight.classList.add("input-error");
+    }
+
+    if (!email.value) {
+      e.preventDefault();
+      email.classList.add("input-error");
+    }
+
+    if (!phone.value) {
+      e.preventDefault();
+      phone.classList.add("input-error");
+    }
+
+    if (!Name.value || !weight.value || !email.value || !phone.value) {
+      e.preventDefault();
+    }
   });
 }
