@@ -39,6 +39,7 @@
 
 .compare__item {
   position: absolute;
+  display: none;
   top: 0;
   right: 0;
   width: 100%;
@@ -46,6 +47,7 @@
   background-color: inherit;
 
   &--before {
+    display: block;
     right: 5px;
 
     @media (min-width: @tablet-width) {
@@ -65,10 +67,22 @@
     }
   }
 
-  &--after {
-    width: 0;
+  &--fat {
+    &-curent {
+      @media (min-width: @tablet-width) {
+        width: 676px;
+      }
 
+      @media (min-width: @desktop-width) {
+        width: 100%;
+        padding-right: 40px;
+      }
+    }
+  }
+
+  &--after {
     @media (min-width: @tablet-width) {
+      display: block;
       right: -25px;
       width: 100%;
       height: 520px;
@@ -81,6 +95,10 @@
       width: 100%;
       height: 100%;
       background-image: linear-gradient(@basic__white 195px, @special__light-grey 195px);
+    }
+
+    &-curent {
+      display: block;
     }
   }
 }
@@ -173,20 +191,6 @@
     }
   }
 
-  &::after {
-    position: absolute;
-    top: 7px;
-    width: 35px;
-    height: 6px;
-    background-color: @basic__green;
-    border-radius: 5px;
-    pointer-events: none;
-
-    @media (min-width: @tablet-width) {
-      display: none;
-    }
-  }
-
   &--before {
     padding-right: 60px;
 
@@ -199,12 +203,23 @@
         display: none;
       }
     }
+  }
 
+  &--before-curent {
     &::after {
-      content: "";
+      position: absolute;
+      top: 7px;
       right: 0;
+      content: "";
+      width: 35px;
+      height: 6px;
+      background-color: @basic__green;
+      border-radius: 5px;
+      pointer-events: none;
+    }
 
-      @media (min-width: @tablet-width) {
+    @media (min-width: @tablet-width) {
+      &::after {
         display: none;
       }
     }
@@ -218,9 +233,25 @@
       border-left: none;
       border-radius: 0 5px 5px 0;
     }
+  }
 
+  &--after-curent {
     &::after {
+      position: absolute;
+      top: 7px;
       left: 0;
+      content: "";
+      width: 35px;
+      height: 6px;
+      background-color: @basic__green;
+      border-radius: 5px;
+      pointer-events: none;
+    }
+
+    @media (min-width: @tablet-width) {
+      &::after {
+        display: none;
+      }
     }
   }
 
