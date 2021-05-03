@@ -58,13 +58,13 @@
       <h1 class="main-title main-title--form">Подбор программы</h1>
       <p class="main-description">Заполните анкету, и мы подберем<br> программу питания для вашего кота</p>
 
-      <form class="main-form" method="get" action="https://echo.htmlacademy.ru">
+      <form class="main-form" method="POST" action="https://echo.htmlacademy.ru">
 
         <div class="main-form__container">
           <div class="main-form__questionnaire questionnaire">
             <div class="questionnaire__wrapper">
               <label class="questionnaire__label label" for="name">Имя:*</label>
-              <input class="questionnaire__input questionnaire__input--name input" type="text" id="name" name="name" required placeholder="Барсик" onclick="removeAttr()">
+              <input class="questionnaire__input questionnaire__input--name input" type="text" id="name" name="name" required placeholder="Барсик">
             </div>
             <div class="questionnaire__wrapper">
               <label class="questionnaire__label label questionnaire__label--weight" for="weight">Вес (кг):*</label>
