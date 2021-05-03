@@ -1,9 +1,9 @@
-.main-form__programs {
+.programs-selection {
   padding: 29px 19px 23px;
   border-bottom: 1px solid @special__grey-two;
 
   @media (min-width: @tablet-width) {
-    margin: 0 67px 0 70px;
+    margin: 0 67px 0 71px;
     padding: 30px 27px 29px;
     border: 1px solid @basic__grey-three;
   }
@@ -11,21 +11,21 @@
   @media (min-width: @desktop-width) {
     width: 512px;
     margin: 0;
-    padding: 30px 28px;
+    padding: 29px 29px 29px 27px;
   }
 }
 
 .programs-selection__wrapper {
   margin-bottom: 25px;
 
-  &:last-child {
+  &--last {
     margin-bottom: 0;
   }
 
   @media (min-width: @tablet-width) {
     margin-bottom: 23px;
 
-    &:last-child {
+    &--last {
       margin-bottom: 0;
     }
   }
@@ -52,10 +52,17 @@
     padding-left: 60px;
 
     &::before {
-      top: -7px;
+      top: -6px;
       left: 0;
       width: 40px;
       height: 40px;
+      box-sizing: border-box;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &::before {
+      top: -5px;
     }
   }
 }
@@ -72,18 +79,26 @@
 
   @media (min-width: @tablet-width) {
     top: 5px;
-    left: 12px;
+    left: 11px;
     width: 18px;
     height: 18px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 6px;
+    left: 11px;
   }
 }
 
 .programs-selection__input:hover + .programs-selection__label::before,
-.programs-selection__input:focus + .programs-selection__label::before,
-.programs-selection__input:disabled + .programs-selection__label::before {
+.programs-selection__input:focus + .programs-selection__label::before {
   border-color: @special__grey-five;
 }
 
 .programs-selection__input:disabled + .programs-selection__label {
   opacity: 0.3;
+
+  &::before {
+    border-color: @special__grey-five;
+  }
 }

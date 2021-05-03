@@ -36,13 +36,13 @@
       <div class="main-nav__container main-nav__container--closed main-nav__container--nojs">
         <ul class="main-nav__list">
           <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link-index main-nav__link-index--current">Главная</a>
+            <a class="main-nav__link main-nav__link--index main-nav__link--index-current">Главная</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link-index" href="catalog.html">Каталог продукции</a>
+            <a class="main-nav__link main-nav__link--index" href="catalog.html">Каталог продукции</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link-index" href="form.html">Подбор программы</a>
+            <a class="main-nav__link main-nav__link--index" href="form.html">Подбор программы</a>
           </li>
         </ul>
       </div>
@@ -75,16 +75,16 @@
       <h2 class="visually-hidden">Виды программ функционального питания</h2>
       <div class="programs__wrapper">
         <ul class="programs__list">
-          <li class="programs__item">
-            <h3 class="programs__title">Похудение</h3>
+          <li class="programs__item programs__item--first">
+            <h3 class="programs__title programs__title--first">Похудение</h3>
             <p class="programs__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям?
               Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
             <a class="programs__button" href="slim.html">
               <span class="programs__button--text">Каталог slim</span>
             </a>
           </li>
-          <li class="programs__item">
-            <h3 class="programs__title">Набор массы</h3>
+          <li class="programs__item programs__item--last">
+            <h3 class="programs__title programs__title--last">Набор массы</h3>
             <p class="programs__description">Заработать авторитет среди дворовых котов<br class="programs__description--br"> и даже собак? Серия Cat Energy
               Pro поможет вашему коту нарастить необходимые<br class="programs__description--br"> мышцы!</p>
             <a class="programs__button" href="pro.html">
@@ -116,7 +116,7 @@
           </li>
           <li class="features__item features__item--alarm">
             <p class="features__description">
-              Уже через месяц наслаждайтесь изменениями к лучшему<br> вашего питомца!
+              Уже через месяц наслаждайтесь изменениями к лучшему<br class="features__description--br"> вашего питомца!
             </p>
           </li>
         </ul>
@@ -137,19 +137,19 @@
                 <dd class="example__number">5 кг</dd>
               </div>
               <div class="example__item">
-                <dt class="example__description">Затрачено времени</dt>
+                <dt class="example__description example__description--time">Затрачено времени</dt>
                 <dd class="example__number">60 дней</dd>
               </div>
             </dl>
             <p class="example__expenses">Затраты на питание: <span class="example__expenses--price">15 000 РУБ.</span></p>
           </div>
         </div>
-        <div class="example__compare compare compare--js">
+        <div class="example__compare compare">
           <input class="compare__before-checker visually-hidden" id="before" type="radio" name="compare">
           <input class="compare__after-checker visually-hidden" id="after" type="radio" name="compare">
 
-          <ul class="compare__list compare__list--nojs">
-            <li class="compare__item compare__item--before compare__item--nojs" >
+          <ul class="compare__list">
+            <li class="compare__item compare__item--before compare__item--fat">
               <picture>
                 <source type="image/webp" media="(min-width: 1440px)" srcset="img/cat-fat.webp 1x, img/cat-fat@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/cat-fat.webp 1x, img/cat-fat@2x.webp 2x">
@@ -161,40 +161,38 @@
                   alt="Сидящий толстый котик с разноцветными глазами">
               </picture>
             </li>
-            <li class="compare__item compare__item--after compare__item--nojs" style="width: 0px;">
+            <li class="compare__item compare__item--after">
               <picture>
                 <source type="image/webp" media="(min-width: 1440px)" srcset="img/cat-skinny.webp 1x, img/cat-skinny@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/cat-skinny.webp 1x, img/cat-skinny@2x.webp 2x">
                 <source type="image/webp" srcset="img/cat-skinny-mobile.webp 1x, img/cat-skinny-mobile@2x.webp 2x">
                 <source media="(min-width: 1440px)" srcset="img/cat-skinny.png 1x, img/cat-skinny@2x.png 2x">
                 <source media="(min-width: 768px)" srcset="img/cat-skinny.png 1x, img/cat-skinny@2x.png 2x">
-                <img class="compare__images compare__images--skinny compare__images--current" src="img/cat-skinny-mobile.png"
+                <img class="compare__images compare__images--skinny" src="img/cat-skinny-mobile.png"
                   srcset="img/cat-skinny-mobile@2x.png 2x" width="251" height="240"
                   alt="Сидящий худой котик с разноцветными глазами">
-              </picture>
-            </li>
-            <li class="compare__item compare__item--duble-cat compare__item--yesjs">
-              <picture>
-                <source type="image/webp" media="(min-width: 1440px)" srcset="img/image-cat-desktop.webp 1x, img/image-cat-desktop@2x.webp 2x">
-                <source type="image/webp" srcset="img/image-cat-tablet.webp 1x, img/image-cat-tablet@2x.webp 2x">
-                <source media="(min-width: 1440px)" srcset="img/image-cat-desktop.png 1x, img/image-cat-desktop@2x.png 2x">
-                <img class="compare__images compare__images--nojs" src="img/image-cat-tablet.png"
-                  srcset="img/image-cat-tablet@2x.png 2x" width="708" height="620"
-                  alt="Два кота, до применения корма и после">
               </picture>
             </li>
           </ul>
 
           <div class="compare__bar">
-            <button class="compare__label compare__label--before" type="button">Было</button>
-            <div class="compare__scale">
-              <label class="compare__input-group">
-                <input class="compare__input" type="range" min="0" max="100" step="1" value="0">
-                <span class="visually-hidden">Соотношение вариантов</span>
-                <span class="compare__pin" style="left: 50%;"></span>
-              </label>
+
+            <div class="compare__bar--container">
+
+              <button class="compare__label compare__label--before compare__label--before-curent" type="button">Было</button>
+
+              <div class="compare__scale">
+                <label class="compare__input-group">
+                  <input class="compare__input" type="range" min="0" max="100" step="1" value="0">
+                  <span class="visually-hidden">Соотношение вариантов</span>
+                  <span class="compare__pin" tabindex="0" style="left: 50%;"></span>
+                </label>
+              </div>
+
+              <button class="compare__label compare__label--after" type="button">Стало</button>
+
             </div>
-            <button class="compare__label compare__label--after" type="button">Стало</button>
+
           </div>
 
         </div>
