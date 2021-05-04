@@ -4,53 +4,43 @@
   font-weight: 400;
   text-align: center;
   color: @basic__white;
+  background-image:
+    url("../img/index-background-mobile.png"),
+    linear-gradient(@basic__white 0, @special__green 0);
+  background-size: 100%;
+  background-repeat: no-repeat;
 
-  &::before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    content: "";
-    width: 100%;
-    min-height: 302px;
-    background-image: url("../img/index-background-mobile.png");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    z-index: -1;
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/index-background-mobile@2x.png");
-    }
+  @media (min-resolution: 2dppx) {
+    background-image:
+      url("../img/index-background-mobile@2x.png"),
+      linear-gradient(@basic__white 0, @special__green 0);
   }
 
   @media (min-width: @tablet-width) {
-    &::before {
-      background: none;
-    }
+    background: none;
   }
 
   @media (min-width: @desktop-width) {
-    &::before {
-      min-height: 694px;
-      margin-top: -145px;
-      background-image: url("../img/index-background-desktop.png");
-      background-repeat: no-repeat;
-      background-size: 50%;
-      background-position-x: right;
+    position: relative;
+    margin-top: -145px;
+    margin-bottom: 82px;
+    padding-top: 145px;
+    height: 549px;
+    font-family: "Oswald", "Arial", sans-serif;
+    font-weight: 400;
+    text-align: center;
+    color: @basic__white;
+    background-image:
+      url("../img/index-background-desktop.png"),
+      linear-gradient(90deg, @basic__white 0, @special__green 0);
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position-x: right;
 
-      @media (min-resolution: 2dppx) {
-        background-image: url("../img/index-background-desktop@2x.png");
-      }
-    }
-
-    &::after {
-      position: absolute;
-      top: -145px;
-      left: 50%;
-      content: "";
-      width: 720px;
-      height: 694px;
-      background-color: @special__green;
-      z-index: -10;
+    @media (min-resolution: 2dppx) {
+      background-image:
+        url("../img/index-background-desktop@2x.png"),
+        linear-gradient(90deg, @basic__white 0, @special__green 0);
     }
   }
 }
@@ -58,6 +48,7 @@
 .selection__wrapper {
   margin: 0 auto;
   padding: 27px 0 22px 0;
+  background-image: linear-gradient(transparent 302px, white 302px);
 
   @media (min-width: @tablet-width) {
     position: relative;
@@ -65,12 +56,14 @@
     min-height: 810px;
     margin: 0 auto;
     padding: 0 117px;
+    background: none;
   }
 
   @media (min-width: @desktop-width) {
     width: 1060px;
     min-height: 471px;
     padding: 78px 80px 82px;
+    z-index: 1;
   }
 }
 
