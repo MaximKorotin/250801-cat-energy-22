@@ -20,7 +20,10 @@
 
   @media (min-width: @desktop-width) {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    column-gap: 80px;
+    row-gap: 80px;
+    justify-content: center;
   }
 }
 
@@ -91,8 +94,9 @@
   @media (min-width: @desktop-width) {
     display: block;
     width: 570px;
-    margin: 0 80px 0 0;
+    margin: 0;
     padding: 77px 52px 59px;
+    box-sizing: border-box;
 
     &--last {
       margin-right: 0;
@@ -252,7 +256,7 @@
 .programs__button {
   width: max-content;
 
-  &--text {
+  &-text {
 
     position: relative;
     padding-right: 41px;
@@ -307,8 +311,8 @@
   }
 }
 
-.programs__button:hover .programs__button--text,
-.programs__button:focus .programs__button--text {
+.programs__button:hover .programs__button-text,
+.programs__button:focus .programs__button-text {
   &::before {
     right: -2px;
     width: 26px;
@@ -319,7 +323,7 @@
   }
 }
 
-.programs__button:active .programs__button--text {
+.programs__button:active .programs__button-text {
   opacity: 0.3;
 
   &::before {

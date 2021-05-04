@@ -63,7 +63,7 @@
   }
 }
 
-.contact-information__container--input {
+.contact-information__container-input {
   position: relative;
 }
 
@@ -146,7 +146,7 @@
   }
 }
 
-.input__image {
+.contact-information__image {
   position: absolute;
 
   &--email {
@@ -172,20 +172,20 @@
   }
 }
 
-.contact-information__input:focus + .input__image--email {
+.contact-information__input:focus + .contact-information__image--email {
   stroke: @basic__green;
 }
 
-.contact-information__input:invalid + .input__image--email,
-.input-error + .input__image--email {
+.contact-information__input:invalid + .contact-information__image--email,
+.input-error + .contact-information__image--email {
   stroke: @status__error;
 }
 
-.contact-information__input:focus + .input__image--phone {
+.contact-information__input:focus + .contact-information__image--phone {
   fill: @basic__green;
 }
 
-.contact-information__input:invalid + .input__image--phone,
-.input-error + .input__image--phone {
+.contact-information__input:invalid + .contact-information__image--phone,
+.input-error + .contact-information__image--phone {
   fill: @status__error;
 }

@@ -41,6 +41,17 @@
         background-image: url("../img/index-background-desktop@2x.png");
       }
     }
+
+    &::after {
+      position: absolute;
+      top: -145px;
+      left: 50%;
+      content: "";
+      width: 720px;
+      height: 694px;
+      background-color: @special__green;
+      z-index: -10;
+    }
   }
 }
 
